@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D54977EC1E6E4CE200DA4A6E /* VennDiagram.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54977EB1E6E4CE200DA4A6E /* VennDiagram.swift */; };
+		D54977EE1E6E543A00DA4A6E /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54977ED1E6E543A00DA4A6E /* CircleView.swift */; };
 		D54CAA201E513CDB00566498 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D54CAA1F1E513CDB00566498 /* MainViewController.swift */; };
 		D5DB90C41E4AA45600566DA2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB90C31E4AA45600566DA2 /* AppDelegate.swift */; };
 		D5DB90C61E4AA45600566DA2 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB90C51E4AA45600566DA2 /* MasterViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D54977EB1E6E4CE200DA4A6E /* VennDiagram.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VennDiagram.swift; sourceTree = "<group>"; };
+		D54977ED1E6E543A00DA4A6E /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		D54CAA1F1E513CDB00566498 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D5DB90C01E4AA45600566DA2 /* AutoLayoutStudyProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AutoLayoutStudyProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5DB90C31E4AA45600566DA2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 				D5DB90C51E4AA45600566DA2 /* MasterViewController.swift */,
 				D5DB90C71E4AA45600566DA2 /* DetailViewController.swift */,
 				D5DB90C91E4AA45600566DA2 /* Main.storyboard */,
+				D54977EB1E6E4CE200DA4A6E /* VennDiagram.swift */,
+				D54977ED1E6E543A00DA4A6E /* CircleView.swift */,
 				D5DB90CC1E4AA45600566DA2 /* Assets.xcassets */,
 				D5DB90CE1E4AA45600566DA2 /* LaunchScreen.storyboard */,
 				D5DB90D11E4AA45600566DA2 /* Info.plist */,
@@ -143,8 +149,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D54977EE1E6E543A00DA4A6E /* CircleView.swift in Sources */,
 				D5DB90C81E4AA45600566DA2 /* DetailViewController.swift in Sources */,
 				D5DB90C61E4AA45600566DA2 /* MasterViewController.swift in Sources */,
+				D54977EC1E6E4CE200DA4A6E /* VennDiagram.swift in Sources */,
 				D5DB90C41E4AA45600566DA2 /* AppDelegate.swift in Sources */,
 				D54CAA201E513CDB00566498 /* MainViewController.swift in Sources */,
 			);
