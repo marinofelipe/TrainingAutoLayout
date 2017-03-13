@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -134,14 +135,111 @@
                     <view key="view" contentMode="scaleToFill" id="svH-Pt-448">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYc-Gf-8nc" customClass="VennDiagram" customModule="AutoLayoutStudyProject" customModuleProvider="target">
+                                <rect key="frame" x="36" y="84" width="303" height="191.5"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W5I-CQ-KcB" customClass="CircleView" customModule="AutoLayoutStudyProject" customModuleProvider="target">
+                                        <rect key="frame" x="131.5" y="20" width="151.5" height="151.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="W5I-CQ-KcB" secondAttribute="height" multiplier="1:1" id="jY0-Lx-dT8"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.0" green="0.2334255642361111" blue="0.44490770730000001" alpha="0.51380565068493156" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJo-jB-Bev" customClass="CircleView" customModule="AutoLayoutStudyProject" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="151.5" height="151.5"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="eJo-jB-Bev" secondAttribute="height" multiplier="1:1" id="crn-p1-K3R"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="fillColor">
+                                                <color key="value" red="0.0" green="0.59665256076388884" blue="0.44490770730000001" alpha="0.51380565068493156" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="240" id="5pN-e6-TTz"/>
+                                    <constraint firstAttribute="trailing" secondItem="W5I-CQ-KcB" secondAttribute="trailing" constant="20" id="Bs1-3B-v9f"/>
+                                    <constraint firstItem="eJo-jB-Bev" firstAttribute="top" secondItem="vYc-Gf-8nc" secondAttribute="top" constant="20" id="JYS-vu-CTT"/>
+                                    <constraint firstItem="eJo-jB-Bev" firstAttribute="leading" secondItem="vYc-Gf-8nc" secondAttribute="leading" constant="20" id="Ngf-or-Xc2"/>
+                                    <constraint firstAttribute="bottom" secondItem="eJo-jB-Bev" secondAttribute="bottom" constant="20" id="TX9-eZ-iNj"/>
+                                    <constraint firstItem="W5I-CQ-KcB" firstAttribute="top" secondItem="vYc-Gf-8nc" secondAttribute="top" constant="20" id="gf2-v5-B3Y"/>
+                                    <constraint firstAttribute="bottom" secondItem="W5I-CQ-KcB" secondAttribute="bottom" constant="20" id="oR2-kd-ljz"/>
+                                    <constraint firstItem="W5I-CQ-KcB" firstAttribute="leading" secondItem="eJo-jB-Bev" secondAttribute="trailing" constant="-40" id="xWL-iJ-10w"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="leftCircleBottomConstraint" destination="TX9-eZ-iNj" id="rZz-A0-JSN"/>
+                                    <outlet property="leftCircleLeadingConstraint" destination="Ngf-or-Xc2" id="UR2-hc-yBR"/>
+                                    <outlet property="leftCircleTopConstraint" destination="JYS-vu-CTT" id="Q0S-qy-sbz"/>
+                                    <outlet property="rightCircleBottomConstraint" destination="oR2-kd-ljz" id="Kc6-HQ-ndM"/>
+                                    <outlet property="rightCircleTopConstraint" destination="gf2-v5-B3Y" id="E6q-BT-naz"/>
+                                    <outlet property="rightCircleTraillingConstraint" destination="Bs1-3B-v9f" id="Ldf-E3-HAx"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gyM-Sv-kgw">
+                                <rect key="frame" x="125" y="623" width="125" height="44"/>
+                                <state key="normal" title="Balanced"/>
+                                <connections>
+                                    <action selector="balancedTappedWithSender:" destination="JEX-9P-axG" eventType="touchUpInside" id="lc0-Zo-GKQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NyV-w5-jXT">
+                                <rect key="frame" x="250" y="623" width="125" height="44"/>
+                                <state key="normal" title="Right"/>
+                                <connections>
+                                    <action selector="rightTappedWithSender:" destination="JEX-9P-axG" eventType="touchUpInside" id="VGJ-FO-tGn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t9-qA-gyA">
+                                <rect key="frame" x="0.0" y="623" width="125" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="yun-8b-q14"/>
+                                </constraints>
+                                <state key="normal" title="Left"/>
+                                <connections>
+                                    <action selector="leftTappedWithSender:" destination="JEX-9P-axG" eventType="touchUpInside" id="dD7-ve-JaL"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0t9-qA-gyA" firstAttribute="width" secondItem="gyM-Sv-kgw" secondAttribute="width" id="0pv-Bo-l6P"/>
+                            <constraint firstItem="0t9-qA-gyA" firstAttribute="top" secondItem="gyM-Sv-kgw" secondAttribute="top" id="6KL-Pa-Ibh"/>
+                            <constraint firstAttribute="trailing" secondItem="NyV-w5-jXT" secondAttribute="trailing" id="8NN-FW-epe"/>
+                            <constraint firstItem="gyM-Sv-kgw" firstAttribute="width" secondItem="NyV-w5-jXT" secondAttribute="width" id="Gha-qA-mPd"/>
+                            <constraint firstItem="0t9-qA-gyA" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="GkD-g5-nGG"/>
+                            <constraint firstItem="gyM-Sv-kgw" firstAttribute="leading" secondItem="0t9-qA-gyA" secondAttribute="trailing" id="H0x-lE-tOZ"/>
+                            <constraint firstItem="NyV-w5-jXT" firstAttribute="leading" secondItem="gyM-Sv-kgw" secondAttribute="trailing" id="Ogr-q1-9nw"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="0t9-qA-gyA" secondAttribute="bottom" id="WYT-LB-XjE"/>
+                            <constraint firstItem="vYc-Gf-8nc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="20" id="cHV-at-JEK"/>
+                            <constraint firstItem="gyM-Sv-kgw" firstAttribute="leading" secondItem="0t9-qA-gyA" secondAttribute="trailing" id="drF-5x-psD"/>
+                            <constraint firstItem="0t9-qA-gyA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eJo-jB-Bev" secondAttribute="bottom" constant="8" id="f7a-1r-t7e"/>
+                            <constraint firstItem="gyM-Sv-kgw" firstAttribute="top" secondItem="NyV-w5-jXT" secondAttribute="top" id="fRx-cQ-HTn"/>
+                            <constraint firstItem="vYc-Gf-8nc" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="hhe-Vi-xGf"/>
+                            <constraint firstItem="vYc-Gf-8nc" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="20" id="mAw-tk-qlb"/>
+                            <constraint firstItem="gyM-Sv-kgw" firstAttribute="bottom" secondItem="NyV-w5-jXT" secondAttribute="bottom" id="pjX-XX-psf"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="vYc-Gf-8nc" secondAttribute="trailing" constant="20" id="vLF-pp-nGY"/>
+                            <constraint firstItem="vYc-Gf-8nc" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" priority="990" constant="20" id="w7x-36-Fok"/>
+                            <constraint firstItem="0t9-qA-gyA" firstAttribute="bottom" secondItem="gyM-Sv-kgw" secondAttribute="bottom" id="zZj-Qr-86M"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
+                    <connections>
+                        <outlet property="vennDiagram" destination="vYc-Gf-8nc" id="Hft-9k-oyI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="709" y="129"/>
+            <point key="canvasLocation" x="708" y="128.18590704647679"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
