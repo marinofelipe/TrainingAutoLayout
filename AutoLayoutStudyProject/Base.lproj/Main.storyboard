@@ -218,10 +218,10 @@
                             <constraint firstItem="0t9-qA-gyA" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="GkD-g5-nGG"/>
                             <constraint firstItem="gyM-Sv-kgw" firstAttribute="leading" secondItem="0t9-qA-gyA" secondAttribute="trailing" id="H0x-lE-tOZ"/>
                             <constraint firstItem="NyV-w5-jXT" firstAttribute="leading" secondItem="gyM-Sv-kgw" secondAttribute="trailing" id="Ogr-q1-9nw"/>
+                            <constraint firstItem="0t9-qA-gyA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vYc-Gf-8nc" secondAttribute="bottom" constant="8" id="R5v-LH-gpt"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="0t9-qA-gyA" secondAttribute="bottom" id="WYT-LB-XjE"/>
                             <constraint firstItem="vYc-Gf-8nc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="20" id="cHV-at-JEK"/>
                             <constraint firstItem="gyM-Sv-kgw" firstAttribute="leading" secondItem="0t9-qA-gyA" secondAttribute="trailing" id="drF-5x-psD"/>
-                            <constraint firstItem="0t9-qA-gyA" firstAttribute="top" relation="greaterThanOrEqual" secondItem="eJo-jB-Bev" secondAttribute="bottom" constant="8" id="f7a-1r-t7e"/>
                             <constraint firstItem="gyM-Sv-kgw" firstAttribute="top" secondItem="NyV-w5-jXT" secondAttribute="top" id="fRx-cQ-HTn"/>
                             <constraint firstItem="vYc-Gf-8nc" firstAttribute="centerX" secondItem="svH-Pt-448" secondAttribute="centerX" id="hhe-Vi-xGf"/>
                             <constraint firstItem="vYc-Gf-8nc" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" constant="20" id="mAw-tk-qlb"/>
